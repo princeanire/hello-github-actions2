@@ -1,0 +1,13 @@
+name: upload a file to Artifacts
+
+on: [workflow_dispatch]
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5.0.0
+      - name: upload README.md
+        uses: actions/upload-artifact@v5.0.0
+        with:
+          name: README.md
