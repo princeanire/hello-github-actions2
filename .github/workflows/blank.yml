@@ -12,3 +12,12 @@ jobs:
         with:
           name: README.md
           path: ./README.md
+  download:
+    runs-on: ubuntu-latest
+    needs: upload
+    steps:
+      - uses: actions/download-artifact@v6.0.0
+        with:
+          name: README.md
+    
+  
